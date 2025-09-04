@@ -1,13 +1,24 @@
+/* #region Сброс */
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   font-family: serif;
 }
+
+/* #endregion Сброс*/
+
+
+/* #region Section team */
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -18,29 +29,37 @@ body {
 .team__item {
   display: flex;
 }
+
 .team__item img {
   align-self: center;
 }
+
 .team__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 h2 {
   text-align: center;
   font-size: 40px;
 }
+
 .team__text {
   max-width: 350px;
   padding-left: 20px;
 }
+
 @media screen and (max-width:420px) {
-  .team__item  {
+  .team__item {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
+
   .team__text {
     padding-left: 0;
   }
 }
+
+/* #endregion Section team */
