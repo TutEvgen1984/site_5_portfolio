@@ -14,18 +14,90 @@ body {
   font-family: serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /* #endregion Сброс*/
 
+/* #region Общее */
+:root {
+  --font-family: "Playfair Display", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Barlow", sans-serif;
+}
 
-/* #region Section team */
-.section--team {}
-
-.container {
+.container--common {
   max-width: 1440px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
 }
+
+/* Для всех ссылок цвет после посещения сделаем одинаковыми соответствующе цвету родительского элемента */
+a:visited {
+  color: inherit;
+}
+
+/* #endregion Общее */
+
+/* #region Header Menu */
+
+.header-menu {}
+
+.header-menu--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {}
+
+.logo--a {
+  text-decoration: none;
+  font-family: var(--third-family);
+  font-weight: 600;
+  font-size: 42px;
+  color: #2f2e2e;
+}
+
+
+.header__nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.header__nav--li-01 {}
+
+.header__nav-a {
+  text-decoration: none;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #2f2e2e;
+}
+
+.header__nav--li-02 {}
+
+.header__nav--li-03 {}
+
+.header__nav--li-04 {}
+
+.header-menu--find-btn {}
+
+/* #endregion Header Menu */
+
+/* #region Section Team */
+.section--team {}
 
 .team__item {
   display: flex;
@@ -63,4 +135,4 @@ h2 {
   }
 }
 
-/* #endregion Section team */
+/* #endregion Section Team */
