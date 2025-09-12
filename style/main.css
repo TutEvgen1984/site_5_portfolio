@@ -54,8 +54,13 @@ a:visited {
 
 .header-menu--container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  min-height: 150px;
+  margin: 0 auto;
+  gap: 15px;
+  padding: 0 65px;
 }
 
 .logo {}
@@ -66,16 +71,30 @@ a:visited {
   font-weight: 600;
   font-size: 42px;
   color: #2f2e2e;
+
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
 }
 
+.logo--a:hover {
+  background-color: aqua;
+}
+
+.header__nav {
+  max-width: 625px;
+  width: 100%;
+}
 
 .header__nav ul {
   display: flex;
   list-style: none;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.header__nav--li-01 {}
+.header__nav li {}
 
 .header__nav-a {
   text-decoration: none;
@@ -84,7 +103,17 @@ a:visited {
   font-size: 20px;
   text-align: center;
   color: #2f2e2e;
+
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
 }
+
+.header__nav-a:hover {
+  background-color: aqua;
+}
+
+.header__nav--li-01 {}
 
 .header__nav--li-02 {}
 
@@ -92,7 +121,17 @@ a:visited {
 
 .header__nav--li-04 {}
 
-.header-menu--find-btn {}
+.header-menu--find-btn {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.header-menu--find-btn:hover {
+  cursor: pointer;
+  background-color: aqua;
+}
 
 /* #endregion Header Menu */
 
