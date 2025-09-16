@@ -126,14 +126,72 @@ a:visited {
   border: none;
   background-color: transparent;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .header-menu--find-btn:hover {
-  cursor: pointer;
   background-color: aqua;
 }
 
 /* #endregion Header Menu */
+
+/* #region Section Header */
+
+.section--header {
+  position: relative;
+  /* сделали секции позицию относительную чтобы плавающий поверх блок ниже начинал считать свои координаты относительно текущей секции */
+}
+
+.header__block-at-back {
+  text-align: right;
+
+
+}
+
+.header__img-house {
+  /*  Адаптивное изображение */
+  max-width: 100%;
+  height: auto;
+}
+
+.header__block-at-front {
+  max-width: 691px;
+  width: 100%;
+  min-height: 550px;
+  background: linear-gradient(91deg, rgba(244, 246, 245, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+  position: absolute;
+  left: 0;
+  /* top: 95px; */
+  top: calc((95*100/739)px);
+  /* положение считается относительно ближайшего блока с позицией относительная, это текущая секция */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 100px;
+}
+
+.header__h1 {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 51px;
+  color: #2f2e2e;
+
+  max-width: 438px;
+}
+
+.header__h2 {
+  font-family: var(--second-family);
+  font-weight: 200;
+  font-size: 32px;
+  color: #2f2e2e;
+
+  max-width: 438px;
+}
+
+/* #endregion Section Header */
 
 /* #region Section Team */
 .section--team {}
@@ -152,7 +210,7 @@ a:visited {
   justify-content: space-evenly;
 }
 
-h2 {
+.team__h2 {
   text-align: center;
   font-size: 40px;
 }
