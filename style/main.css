@@ -144,7 +144,7 @@ a:visited {
 
 .header__block-at-back {
   text-align: right;
-
+  padding-top: 38px;
 
 }
 
@@ -162,8 +162,7 @@ a:visited {
 
   position: absolute;
   left: 0;
-  /* top: 95px; */
-  top: calc((95*100/739)px);
+  top: 133px;
   /* положение считается относительно ближайшего блока с позицией относительная, это текущая секция */
 
   display: flex;
@@ -192,6 +191,45 @@ a:visited {
 }
 
 /* #endregion Section Header */
+
+/* #region Section Our Services */
+.section--our-services {}
+
+.services__h1 {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 51px;
+  text-align: center;
+  color: #2f2e2e;
+}
+
+.services__items-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.services__item {
+  text-align: center;
+}
+
+.services__h3 {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 27px;
+  text-align: center;
+  color: #2f2e2e;
+}
+
+.services__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #2f2e2e;
+}
+
+/* #endregion Section Our Services */
+
 
 /* #region Section Team */
 .section--team {}
