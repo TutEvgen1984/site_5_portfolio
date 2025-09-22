@@ -46,6 +46,13 @@ a:visited {
   color: inherit;
 }
 
+img {
+  /*  Адаптивное изображение */
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* #endregion Общее */
 
 /* #region Header Menu */
@@ -148,11 +155,7 @@ a:visited {
 
 }
 
-.header__img-house {
-  /*  Адаптивное изображение */
-  max-width: 100%;
-  height: auto;
-}
+.header__img-house {}
 
 .header__block-at-front {
   max-width: 691px;
@@ -193,7 +196,11 @@ a:visited {
 /* #endregion Section Header */
 
 /* #region Section Our Services */
-.section--our-services {}
+.section--our-services {
+  padding-top: 12px;
+  padding-bottom: 65px;
+  background: rgba(37, 77, 77, 0.2);
+}
 
 .services__h1 {
   font-family: var(--font-family);
@@ -206,6 +213,9 @@ a:visited {
 .services__items-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+
+  padding-top: 44px;
 }
 
 .services__item {
@@ -226,9 +236,93 @@ a:visited {
   font-size: 16px;
   text-align: center;
   color: #2f2e2e;
+  max-width: 160px;
+
+  padding-top: 6px;
 }
 
 /* #endregion Section Our Services */
+
+/* #region Section About us */
+.section--about-us {}
+
+.about-us__container {
+  padding: 76px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 85px;
+}
+
+.about-us__right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us__h1 {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 51px;
+  color: #2f2e2e;
+
+  margin-bottom: 30px;
+}
+
+.about-us__h2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 31px;
+  color: #2f2e2e;
+
+  max-width: 455px;
+  margin-bottom: 35px;
+}
+
+.about-us__a {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 24px;
+  color: #2f2e2e;
+
+  text-decoration: none;
+}
+
+/* #endregion Section About us */
+
+.section--our-projects {}
+
+.our-projects__container {}
+
+.our-projects__h1 {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 51px;
+  color: #2f2e2e;
+}
+
+.our-projects__items-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.our-projects__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-projects__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #2f2e2e;
+
+  max-width: 175px;
+}
 
 
 /* #region Section Team */
