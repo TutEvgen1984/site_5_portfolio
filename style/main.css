@@ -144,35 +144,35 @@ img {
 
 /* #region Section Header */
 
-.section--header {
-  position: relative;
-  /* сделали секции позицию относительную чтобы плавающий поверх блок ниже начинал считать свои координаты относительно текущей секции */
+.section--header {}
+
+.header__container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.header__block-at-back {
-  text-align: right;
-  padding-top: 38px;
+.header__outter-block {
+  background-image: url(../img/pexels-expect-best-323780\ 1.png);
+  min-height: 739px;
 
+  background-repeat: no-repeat;
+  background-position: right;
+
+  /* выравниваем по вертикали расположенный внутри блок относительно внешнего */
+  display: flex;
+  align-items: center;
 }
 
-.header__img-house {}
-
-.header__block-at-front {
-  max-width: 691px;
+.header__inner-block {
+  background: linear-gradient(91deg, rgba(244, 246, 245, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+  max-width: 690px;
   width: 100%;
   min-height: 550px;
-  background: linear-gradient(91deg, rgba(244, 246, 245, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
 
-  position: absolute;
-  left: 0;
-  top: 133px;
-  /* положение считается относительно ближайшего блока с позицией относительная, это текущая секция */
-
+  /* выравниваем вертикально содержимое внутри внутреннего блока */
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding-left: 100px;
 }
 
 .header__h1 {
@@ -290,15 +290,18 @@ img {
 
 /* #endregion Section About us */
 
+/* #region Our projects */
 .section--our-projects {}
-
-.our-projects__container {}
 
 .our-projects__h1 {
   font-family: var(--font-family);
   font-weight: 900;
   font-size: 51px;
   color: #2f2e2e;
+
+  padding-top: 18px;
+  padding-left: 70px;
+  margin-bottom: 71px;
 }
 
 .our-projects__items-container {
@@ -306,6 +309,10 @@ img {
   gap: 10px;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 1260px;
+  margin: 0 auto;
+  gap: 85px;
+  margin-bottom: 89px;
 }
 
 .our-projects__item {
@@ -321,12 +328,16 @@ img {
   text-align: center;
   color: #2f2e2e;
 
-  max-width: 175px;
+  max-width: 180px;
+  padding-top: 13px;
 }
 
+/* #endregion Our projects */
 
 /* #region Section Team */
-.section--team {}
+.section--team {
+  padding-bottom: 137px;
+}
 
 .team__item {
   display: flex;
@@ -340,16 +351,38 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 20px;
 }
 
 .team__h2 {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 51px;
   text-align: center;
-  font-size: 40px;
+  color: #000;
+
+  margin-bottom: 91px;
 }
 
 .team__text {
-  max-width: 350px;
+  max-width: 418px;
   padding-left: 20px;
+}
+
+.team__h3 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 28px;
+  color: #2f2e2e;
+
+  margin-bottom: 16px;
+}
+
+.team__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  color: #2f2e2e;
 }
 
 @media screen and (max-width:420px) {
@@ -365,3 +398,76 @@ img {
 }
 
 /* #endregion Section Team */
+
+/* #region Footer */
+.footer {
+  background: #2e2f32;
+  color: white
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 48px;
+
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.footer__left-side {}
+
+.footer__logo {
+  margin-bottom: 6px;
+}
+
+.footer__logo--a {
+  font-family: var(--third-family);
+  font-weight: 600;
+  font-size: 42px;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.footer__left-side-p {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 171%;
+  color: #fafafa;
+
+  max-width: 290px;
+  margin-bottom: 42px;
+}
+
+.footer__left-side-social-icons {
+  display: flex;
+  gap: 35px;
+}
+
+.footer__center {
+  max-width: 381px;
+  width: 100%;
+}
+
+.footer__h3 {
+  font-family: var(--second-family);
+  font-weight: 900;
+  font-size: 24px;
+  color: #fafafa;
+  padding-top: 9px;
+  margin-bottom: 18px;
+}
+
+.footer__center--p {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.footer__right-side {}
+
+/* #endregion Footer */
